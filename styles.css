@@ -33,9 +33,11 @@ h1 {
     text-shadow: 3px 3px 3px black;
     margin-top: 0px; /* Adjust the margin-top to move the title down */
     font-size: 64px; /* Adjust the font size as needed */
+}
 
-    /* Center the title on mobile */
-    text-align: center;
+/* Style the red "Love" */
+h1 span.red {
+    color: red;
 }
 
 .instagram-button {
