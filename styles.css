@@ -1,0 +1,63 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('backgrounds/bg1.jpg');
+    background-size: cover;
+    background-position: center; /* Default position for all screens */
+}
+
+/* Vignette for edges of the screen */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 100%); /* Adjust the opacity (0.3 in this case) */
+    pointer-events: none;
+}
+
+h1 {
+    font-family: 'Comfortaa', sans-serif;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    margin-top: 0px; /* Adjust the margin-top to move the title down */
+    font-size: 64px; /* Adjust the font size as needed */
+
+    /* Center the title on mobile */
+    text-align: center;
+}
+
+.instagram-button {
+    margin-top: 0px; /* Adjust the margin-top to move the logo up or down */
+    width: 80px; /* Adjust the size as needed */
+    height: 80px; /* Adjust the size as needed */
+    background-image: url('logos/instagram.png'); /* Update with the correct path to the Instagram logo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent; /* Set background color to transparent */
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add smooth transition for transform property */
+}
+
+.instagram-button:hover {
+    transform: scale(1.1); /* Scale the button to 110% on hover */
+}
+
+/* Media query for desktop screens (adjust the breakpoint as needed) */
+@media screen and (min-width: 768px) {
+    body {
+        background-position: center calc(0px - 330px); /* Adjust the background position for desktop */
+    }
+}
