@@ -23,7 +23,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 100%); /* Adjust the opacity (0.3 in this case) */
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 100%);
     pointer-events: none;
 }
 
@@ -33,11 +33,27 @@ h1 {
     text-shadow: 3px 3px 3px black;
     margin-top: 0px; /* Adjust the margin-top to move the title down */
     font-size: 64px; /* Adjust the font size as needed */
+    display: flex;
+    letter-spacing: 30px; /* Adjust the letter spacing between characters as needed */
+    justify-content: space-between; /* More space between each word */
+    transition: transform 0.3s ease; /* Add smooth transition for transform property */
 }
 
 /* Style the red "Love" */
-h1 span.red {
+h1 .red {
     color: red;
+}
+
+/* Hover effect for the entire title */
+h1:hover {
+    transform: scale(1.1); /* Scale the entire title on hover */
+}
+
+/* Media query for desktop screens (adjust the breakpoint as needed) */
+@media screen and (min-width: 768px) {
+    body {
+        background-position: center calc(0px - 330px); /* Adjust the background position for desktop */
+    }
 }
 
 .instagram-button {
@@ -55,11 +71,4 @@ h1 span.red {
 
 .instagram-button:hover {
     transform: scale(1.1); /* Scale the button to 110% on hover */
-}
-
-/* Media query for desktop screens (adjust the breakpoint as needed) */
-@media screen and (min-width: 768px) {
-    body {
-        background-position: center calc(0px - 330px); /* Adjust the background position for desktop */
-    }
 }
